@@ -1,12 +1,11 @@
 import React from "react";
-import Bio from "../components/Bio";
-import Resume from "../components/Resume";
+import Bio from "../components/Bio/Bio";
 
 const AboutMe = () => {
   return (
     <div>
+      About Me Page
       <Bio />
-      <Resume />
     </div>
   );
 };

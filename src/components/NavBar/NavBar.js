@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // update state when menu is open (! overrides )
   const handleToggle = () => {
     setMenuOpen((prev) => !prev);
   };
@@ -16,7 +16,6 @@ const NavBar = () => {
   ];
   return (
     <div className="nav-bar">
-      {/* need an onClick event in the button to set the state */}
       <button className="menu-button" open={menuOpen} onClick={handleToggle}>
         {menuOpen ? (
           "X"

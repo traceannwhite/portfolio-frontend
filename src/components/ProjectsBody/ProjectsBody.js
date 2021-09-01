@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProjectsBody = () => {
-  return <div></div>;
+  return <div className="projects-container"></div>;
 };
 
 export default ProjectsBody;

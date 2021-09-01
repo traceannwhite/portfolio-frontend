@@ -1,11 +1,13 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
+import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

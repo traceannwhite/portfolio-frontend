@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProjectCard = () => {
-  return <div></div>;
+  return <div>Project Card Component</div>;
 };
 
 export default ProjectCard;
