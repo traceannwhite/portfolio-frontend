@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { VscChromeClose } from "react-icons/vsc";
+import { BiMenuAltRight } from "react-icons/bi";
+import "./nav-bar.sass";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,29 +21,27 @@ const NavBar = () => {
     <div className="nav-bar">
       <button className="menu-button" open={menuOpen} onClick={handleToggle}>
         {menuOpen ? (
-          "X"
+          <VscChromeClose className="menu-close" />
         ) : (
-          <img
-            src="https://res.cloudinary.com/dhcagrzcb/image/upload/v1627864926/list_lsoefu.svg"
-            alt=""
-            className="hamburger"
-          ></img>
+          <BiMenuAltRight className="menu-open" />
         )}
       </button>
-      <ul className={`menu-links ${menuOpen ? " show-menu" : ""}`}>
-        {navigation.map((nav) => (
-          <li key={nav.text}>
-            <Link
-              to={nav.link}
-              className="active-link"
-              onClick={() => hideMenu()}
-              exact="true"
-            >
-              {nav.text}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="main-nav">
+        <ul className={`menu-links ${menuOpen ? " show-menu" : ""}`}>
+          {navigation.map((nav) => (
+            <li key={nav.text}>
+              <Link
+                to={nav.link}
+                className="active-link"
+                onClick={() => hideMenu()}
+                exact="true"
+              >
+                {nav.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
