@@ -1,14 +1,18 @@
 .nav-bar 
-    border: 1px black solid
+    border-right: 1px black solid
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100px
+    background-color: transparent
     
 .menu-button
     border: none
 
+
     .menu-open, .menu-close
         width: 40px
         height: 40px
-
-    .menu-open
 
 .main-nav
     position: fixed
@@ -20,6 +24,7 @@
     font-size: 2.5em
     letter-spacing: 7px
     z-index: 100
+    display: none
 
     .menu-links 
         text-align: center
